@@ -1,0 +1,34 @@
+{
+  "name": "tool-assembly",
+  "version": "1.0.0",
+  "description": "A simple tool assembly to aid in project development",
+  "main": "main.js",
+  "bin": {
+    "tool-assembly": "./bin/tool-assembly.js"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ottegi/Tool-Assembly.git"
+  },
+  "keywords": [
+    "assembly",
+    "tool",
+    "creation",
+    "nodejs"
+  ],
+  "author": "Ottegi (https://ottegi.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ottegi/Tool-Assembly/issues"
+  },
+  "homepage": "https://github.com/Ottegi/Tool-Assembly#readme",
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "esbuild": "^0.11.3",
+    "rollup": "^2.44.0",
+    "rollup-plugin-esbuild": "^3.0.2"
+  }
+}
