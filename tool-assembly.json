@@ -1,0 +1,21 @@
+{
+    "template": "firebase",
+    "build": {
+        "projectName": {
+            "temp": "{{data}}",
+            "data": "Testing-World"
+        },
+        "metas": {
+            "temp": "{{data}}", 
+            "data": []
+        },
+        "html": {
+            "temp": "{{data}}",
+            "data": ""
+        },
+        "scripts": {
+            "temp": "<script src=\"{{data}}\"></script>",
+            "data": ["index.js"]
+        }
+    }
+}

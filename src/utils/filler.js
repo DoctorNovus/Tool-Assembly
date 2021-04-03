@@ -1,11 +1,16 @@
-export default function fill(data, objects){
-    for(let i = 0; i < Object.keys(objects).length; i++){
-        let val = Object.values(objects)[i];
+export default function fill(data, objects) {
+    for (let x in objects) {
+        let key = x;
+        let val = objects[x];
 
-        // let reg = new RegExp("{{" + objects[i].name + "}}", "g");
+        let reg = new RegExp("{{" + key + "}}", "g");
 
-        console.log(val);
+        let str = val.temp;
+        let reg2 = new RegExp("{{data}}", "g");
+        str = str.replace(reg2, val.data);
 
-        // data.replace(reg, object.value);
+        data = data.replace(reg, str);
     }
+
+    return data;
 }

@@ -2,8 +2,6 @@ import fs from "fs";
 import fill from "./filler";
 
 export function outputFiles(firebase, config, path = "") {
-    console.log(config);
-
     path = path.replace("//", "/");
 
     let keys = Object.keys(firebase);
@@ -25,7 +23,7 @@ export function outputFiles(firebase, config, path = "") {
 
             let pathe = `${process.cwd()}${path.length > 0 ? path : "/"}${key}`;
 
-            fs.writeFileSync(pathe, fill(val, config.build));
+            fs.writeFileSync(pathe, fill(val, JSON.parse(config).build));
         }
     }
 }
